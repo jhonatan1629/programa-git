@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="shortcut icon" href="imagenes/User-Avatar-Profile-PNG-Clipart-Background.ico">
+        <link rel="stylesheet" href="css/reloj.css">
+        <title>Bienvenido </title>
+    </head>
+    <body background="imagenes/fondo.jpg">
+
+        <div class="cont-reloj">
+            <div class="reloj" id="reloj"></div>
+            <div class="datos">
+                <span id="fec_Datos"></span>
+            </div>
+        </div>
+        
+        <div class="container" style="text-align: center;">
+
+            <br><br><br><br><br>
+            <img src="imagenes/logo.png" alt="" class="responsive-img"> <br><br><br><br><br><br>
+
+            <a href="IngresarUsuario.html">
+                <button class=" light-green darken-4 pulse btn-large">
+                    <i class="material-icons right">touch_app</i>
+                    INGRESAR
+                </button>
+            </a>
+        </div>
+
+        <script>
+            let mostrarReloj=()=>{
+            let reloj=document.getElementById('reloj')
+            let fec_Datos=document.getElementById('fec_Datos')
+            let fecha =new Date();
+            let hora=fecha.getHours()
+            let minutos=fecha.getMinutes()
+            let segundos=fecha.getSeconds()
+            let mes=fecha.getMonth()
+            let dia=fecha.getDate()
+            let año=fecha.getFullYear()
+
+            let dias=['lunes','martes','miercoles','jueves','viernes','sabado','domingo']
+            let meses=['enero','febrero','marzo','abril','mayo','junnio','julio','agosto','septiembre','noviembre','diciembre']
+
+            mes=meses[mes]
+            let hr=(hora>12) ? hora-12 : hora
+            let am=(hora<12)? 'AM' :'PM'
+            if(hora<10){hora='0'+hora}
+            if(minutos<10){minutos='0'+ minutos}
+            if(segundos<10){segundos='0'+minutos}
+
+            reloj.textContent=`${hr}:${minutos}:${segundos}:${am}`
+            fec_Datos.textContent=`${dia} ${mes} del ${año}`
+        }
+        
+        setInterval(mostrarReloj,1000)
+
+        </script>
+
+        
+    </body>
+</html>

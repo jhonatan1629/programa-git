@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="shortcut icon" href="imagenes/User-Avatar-Profile-PNG-Clipart-Background.ico">
+        <link rel="stylesheet" href="css/MiEstilo.css">
+        <title>Empleado Novedad</title>
+    </head>
+
+    <body background="imagenes/fondo.jpg">
+
+        <h1 class="titulo2">EMPLEADO NOVEDAD</h1>
+
+        <div class="container" style="text-align: center;">
+
+            <form action="" class="col s12 card-panel grey darken-1">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <label for="disabled">JOHNNATAN ESTIVEN</label>
+                        <input disabled type="text" name="" id="">
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">group</i>
+                        <label for="disabled">BONILLA ROJAS</label>
+                        <input disabled type="text" name="" id="disabled">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s5">
+                        <i class="material-icons prefix">alternate_email</i>
+                        <label for="disabled">JHONATAN060912@GMAIL.COM</label>
+                        <input disabled type="email" name="" id="disabled">
+                    </div>
+                    <div class="input-field col s3">
+                        <i class="material-icons prefix">phone_iphone</i>
+                        <label for="disabled">3115136473</label>
+                        <input disabled type="number" name="" id="disabled">
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">engineering</i>
+                        <label for="disabled">OPERARIO</label>
+                        <input disabled type="text" name="" id="disabled">
+                    </div>
+                </div>
+            </form>>
+            <table class="highlight centered col s12 card-panel grey darken-1 responsive-table">
+                <thead>
+                    <th>NOMBRE</th>
+                    <th>FECHA</th>
+                    <th>HORA INGRESO</th>
+                    <th>HORA SALIDA</th>
+                    <th>NOVEDAD</th>
+                </thead>
+                <tbody>
+                    <td>JOHNNATAN BONILLA ROJAS</td>
+                    <td>13/02/2023</td>
+                    <td>05:30</td>
+                    <td>14:21</td>
+                    <td>N/A</td>
+                </tbody>
+                <tbody>
+                    <td>JOHNNATAN BONILLA ROJAS</td>
+                    <td>14/02/2023</td>
+                    <td>05:45</td>
+                    <td>11:30</td>
+                    <td>Salida Temprano (Sin Escusa)</td>
+                </tbody>
+                <tbody>
+                    <td>JOHNNATAN BONILLA ROJAS</td>
+                    <td>16/02/2023</td>
+                    <td>05:55</td>
+                    <td>12:00</td>
+                    <td>Salida Temprano (escusa medica)</td>
+                </tbody>
+                <tbody>
+                    <td>JOHNNATAN BONILLA ROJAS</td>
+                    <td>17/02/2023</td>
+                    <td>05:30</td>
+                    <td>14:21</td>
+                    <td>N/A</td>
+                </tbody>
+            </table>
+
+            <a href="IngresarUsuario.html">
+                <button class=" red btn">
+                    <i class="material-icons right">logout</i>
+                    REGRESAR
+                </button> &nbsp &nbsp &nbsp &nbsp 
+            </a>
+            <a id="boton1" href="GestionarNovedad.html">
+                <button class=" light-green darken-4 btn" id="Ingresar">
+                    <i class="material-icons right">touch_app</i>
+                    ACTUALIZAR Y GUARDAR
+                </button>
+            </a>
+        </div>
+
+        <script>
+            document.getElementById('boton1').onclick = function(){
+            alert('Novedad Actualizada y Guardada');
+            }
+        </script>
+
+        <script src="js/materialize.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="shortcut icon" href="imagenes/User-Avatar-Profile-PNG-Clipart-Background.ico">
+    <link rel="stylesheet" href="css/MiEstilo.css">
+    <title>Registrar Usuario</title>
+</head>
+<body background="imagenes/fondo.jpg">
+
+    <div class="container" style="text-align: center;">
+        <h1 class="titulo1">REGISTRAR EMPLEADO</h1>
+
+        <form action="" class="col s12 card-panel grey darken-1">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">person</i>
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" name="" id="Nombre">
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">group</i>
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" name="" id="Apellido">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">alternate_email</i>
+                    <label for="Email">Email</label>
+                    <input type="email" name="" id="Email">
+                </div>
+                <div class="input-field col s3">
+                    <i class="material-icons prefix">phone_iphone</i>
+                    <label for="Celular">Celular</label>
+                    <input type="number" name="" id="Celular">
+                </div>
+                <div class="input-field col s4">
+                    <i class="material-icons prefix">engineering</i>
+                    <label for="Cargo">Cargo</label>
+                    <input type="text" name="" id="Cargo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s3">
+                    <i class="material-icons prefix">pin_drop</i>
+                    <label for="Direccion">Direccion</label>
+                    <input type="text" name="" id="Direccion">
+                </div>
+                <div class="input-field col s3">
+                    <i class="material-icons prefix">family_restroom</i>
+                    <label for="Estado_civil">Estado Civil</label>
+                    <input type="text" name="" id="Estado_civil">
+                </div>
+                <div class=" input-field col s3">
+                    <i class="material-icons prefix">calendar_month</i>
+                    <label for="Fecha_Nacimiento"></label>
+                    <input type="date" name="" id="Fecha_Nacimiento">
+                </div>
+                <div class=" input-field col s3">
+                    <i class="material-icons prefix">apartment</i>
+                    <label for="Ciudad">Ciudad</label>
+                    <input type="text" name="" id="Ciudad">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s3">
+                    <i class="material-icons prefix">account_circle</i>
+                    <label for="Usuario">Usuario</label>
+                    <input type="text" name="" id="Usuario">
+                </div>
+                <div class="input-field col s4">
+                    <i class="material-icons prefix">password</i>
+                    <label for="Contraseña">Contraseña</label>
+                    <input type="password" name="" id="Contraseña">
+                </div>
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">lock_open</i>
+                    <label for="Contraseña2">Verificar Contraseña</label>
+                    <input type="password" name="" id="Contraseña2">
+                </div>
+            </div>
+            <a href="RegistrarUsuario.html">
+                <button class=" red btn-large">
+                    <i class="material-icons right">delete</i>
+                    LIMPIAR
+                </button>
+            </a>
+            <a id="boton1">
+                <button class=" light-green darken-4 btn-large" id="Ingresar">
+                    <i class="material-icons right">cloud_upload</i>
+                    GUARDAR USUARIO
+                </button>
+            </a>
+        </form>
+    </div>
+    <div class="container">
+        <a href="IngresarUsuario.html">
+            <button class="red btn-large">
+                <i class="material-icons right">&nbsp logout</i>
+                EXIT
+            </button>
+    </div>
+
+    <script>
+        document.getElementById('boton1').onclick = function(){
+        alert('Usuario Registrado Con Exito');
+        }
+    </script>
+
+    <script src="js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="shortcut icon" href="imagenes/User-Avatar-Profile-PNG-Clipart-Background.ico">
+        <link rel="stylesheet" href="css/reloj.css">
+        <link rel="stylesheet" href="css/MiEstilo.css">
+        <title>Ingresar Usuario</title>
+    </head>
+    <body background="imagenes/fondo.jpg">
+
+        <div class="cont-reloj">
+            <div class="reloj" id="reloj"></div>
+            <div class="datos">
+                <span id="fec_Datos"></span>
+            </div>
+        </div>
+
+        <div class="container" style="text-align: center;">
+
+            <img src="imagenes/logo.png" alt="" class="responsive-img"> <br><br><br><br>
+
+            <a href="IngresarEntrada.html">
+                <button class="light-green darken-4 pulse btn-large">
+                    <i class="material-icons right">directions_runs</i>
+                    INGRESAR ENTRADA 
+                </button>
+            </a>
+            <br><br><br><br>
+            <a href="IngresarSalida.html">
+                <button class="red pulse btn-large btn-large">
+                    <i class="material-icons right">&nbsp logout</i>
+                    &nbsp &nbsp INGRESAR SALIDA
+                </button>
+            </a>
+            <br><br><br><br><br>
+        
+            <a href="RegistrarUsuario.html"><u>REGISTRAR EMPLEADO</u></a> &nbsp &nbsp 
+            <a href="ConsultarEmpleado.html"><u>CONSULTAR EMPLEADO</u></a> &nbsp &nbsp 
+            <a href="GestionarNovedad.html"><u>GESTIONAR NOVEDAD</u></a>
+        </div>
+
+        <div class="container">
+            <a href="Bienvenida.html">
+                <button class="red btn-large">
+                    <i class="material-icons right">&nbsp logout</i>
+                    EXIT
+                </button>
+            </a>
+            
+            <a href="Bienvenida.html">
+                <a class="btn-floating waves-effect right"><i class="material-icons">not_listed_location</i></a>
+            </a>
+        </div>
+
+        <script>
+            let mostrarReloj=()=>{
+            let reloj=document.getElementById('reloj')
+            let fec_Datos=document.getElementById('fec_Datos')
+            let fecha =new Date();
+            let hora=fecha.getHours()
+            let minutos=fecha.getMinutes()
+            let segundos=fecha.getSeconds()
+            let mes=fecha.getMonth()
+            let dia=fecha.getDate()
+            let año=fecha.getFullYear()
+
+            let dias=['lunes','martes','miercoles','jueves','viernes','sabado','domingo']
+            let meses=['enero','febrero','marzo','abril','mayo','junnio','julio','agosto','septiembre','noviembre','diciembre']
+
+            mes=meses[mes]
+            let hr=(hora>12) ? hora-12 : hora
+            let am=(hora<12)? 'AM' :'PM'
+            if(hora<10){hora='0'+hora}
+            if(minutos<10){minutos='0'+ minutos}
+            if(segundos<10){segundos='0'+minutos}
+
+            reloj.textContent=`${hr}:${minutos}:${segundos}:${am}`
+            fec_Datos.textContent=`${dia} ${mes} del ${año}`
+        }
+        
+        setInterval(mostrarReloj,1000)
+
+        </script>
+
+        <script src="js/materialize.min.js"></script>
+    </body>
+</html>

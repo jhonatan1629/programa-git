@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="shortcut icon" href="imagenes/User-Avatar-Profile-PNG-Clipart-Background.ico">
+        <link rel="stylesheet" href="css/MiEstilo.css">
+        <title>Empleado</title>
+    </head>
+
+    <body background="imagenes/fondo.jpg">
+
+        <h1 class="titulo2">EMPLEADO</h1>
+
+        <div class="container" style="text-align: center;">
+
+            <img src="imagenes/Avatar-Profile-Vector.png" class="imagenentradaysalida2"><br>
+
+            <form action="" class="col s12 card-panel grey darken-1">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <label for="">JOHNNATAN ESTIVEN</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">group</i>
+                        <label for="">BONILLA ROJAS</label>
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s5">
+                        <i class="material-icons prefix">alternate_email</i>
+                        <label for="">JHONATAN060912@GMAIL.COM</label>
+                        <input type="email" name="" id="">
+                    </div>
+                    <div class="input-field col s3">
+                        <i class="material-icons prefix">phone_iphone</i>
+                        <label for="">3115136473</label>
+                        <input  type="number" name="" id="">
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">engineering</i>
+                        <label for="">OPERARIO</label>
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3">
+                        <i class="material-icons prefix">pin_drop</i>
+                        <label for="">CALLE 69 D # 56 SUR</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="input-field col s3">
+                        <i class="material-icons prefix">family_restroom</i>
+                        <label for="">CASADO</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class=" input-field col s3">
+                        <i class="material-icons prefix">calendar_month</i>
+                        <label for="">09/02/1997</label>
+                        <input type="TEXT" name="" id="">
+                    </div>
+                    <div class=" input-field col s3">
+                        <i class="material-icons prefix">apartment</i>
+                        <label for="">BOGOTA</label>
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3">
+                        <i class="material-icons prefix">account_circle</i>
+                        <label for="disabled">JHONATAN16</label>
+                        <input disabled type="text" name="" id="disabled">
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">password</i>
+                        <label for="disabled">**********</label>
+                        <input disabled type="password" name="" id="disabled">
+                    </div>
+                    <div class="input-field col s5">
+                        <i class="material-icons prefix">lock_open</i>
+                        <label for="disabled">**********</label>
+                        <input disabled type="password" name="" id="disabled">
+                    </div>
+                </div>
+            </form>
+
+
+            <a href="IngresarUsuario.html">
+                <button class=" red btn">
+                    <i class="material-icons right">logout</i>
+                    REGRESAR
+                </button> &nbsp &nbsp &nbsp &nbsp 
+            </a>
+            <a id="boton1" href="ConsultarEmpleado.html">
+                <button class=" light-green darken-4 btn" id="Ingresar">
+                    <i class="material-icons right">touch_app</i>
+                    ACTUALIZAR Y GUARDAR
+                </button>
+            </a>
+        </div>
+
+        <script>
+            document.getElementById('boton1').onclick = function(){
+            alert('Usuario Actualizado y Guardado con Exito');
+            }
+        </script>
+
+        <script src="js/materialize.min.js"></script>
+    </body>
+
+</html>

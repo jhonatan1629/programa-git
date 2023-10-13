@@ -1,0 +1,39 @@
+a{
+    color: rgb(84, 247, 84);
+  }
+  
+  a:hover{
+    color: rgb(255, 251, 10);
+  }
+  
+  a:active{
+    color: rgb(255, 255, 255);
+  }
+
+.titulo1{
+  color: yellow;
+  font-size: 60px;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+
+.imagenentradaysalida{
+    width: 200px;
+    height: 200px;
+}
+.imagenentradaysalida2{
+  width: 100px;
+  height: 100px;
+}
+
+.imagenenformulario{
+  width: 400px;
+  height: 200px;
+}
+
+.titulo2{
+  color: yellow;
+  font-size: 45px;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif; 
+}

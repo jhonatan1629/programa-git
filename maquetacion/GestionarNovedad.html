@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="shortcut icon" href="imagenes/User-Avatar-Profile-PNG-Clipart-Background.ico">
+        <link rel="stylesheet" href="css/MiEstilo.css">
+        <title>Gestionar Novedad</title>
+    </head>
+
+    <body background="imagenes/fondo.jpg">
+
+        <h1 class="titulo1">usuario</h1>
+
+        <div class="container" style="text-align: center;">
+
+            <img src="imagenes/Avatar-Profile-Vector.png" class="imagenentradaysalida"><br>
+
+            <div class="row container" id="usuario1">
+                <div class="col s10 input-field">
+                    <i class="material-icons prefix">face</i>
+                    <input type="text" id="usuario" style="color: aliceblue;" class="autocomplete">
+                    <label for="usuario">Usuario</label>
+                </div>
+            </div>>
+            <div class="row container">
+                <div class="col s10 input-field">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" style="color: aliceblue;">
+                </div>
+            </div>>
+
+            <a href="IngresarUsuario.html">
+                <button class=" red btn-large">
+                    <i class="material-icons right">logout</i>
+                    REGRESAR
+                </button> &nbsp &nbsp &nbsp &nbsp 
+            </a>
+            <a href="EmpleadoNovedad.html">
+                <button class=" light-green darken-4 btn-large" id="Ingresar">
+                    <i class="material-icons right">touch_app</i>
+                    INGRESAR
+                </button>
+            </a>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+                data: {
+                     "JOHNNATAN ESTIVEN BONILLA ROJAS": null,
+                     "KELLY TATIANA ESQUIVEL": null,
+                }
+            };
+            var elems = document.querySelectorAll('.autocomplete');
+            var instances = M.Autocomplete.init(elems, options);
+            });
+        </script>
+
+        <script src="js/materialize.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="shortcut icon" href="imagenes/User-Avatar-Profile-PNG-Clipart-Background.ico">
+        <link rel="stylesheet" href="css/reloj.css">
+        <link rel="stylesheet" href="css/MiEstilo.css">
+        <title>Ingreso De Entrada</title>
+    </head>
+
+    <body background="imagenes/fondo.jpg">
+
+        <div class="cont-reloj">
+            <div class="reloj" id="reloj"></div>
+            <div class="datos">
+                <span id="fec_Datos"></span>
+            </div>
+        </div>
+        <h1 class="titulo1">INGRESAR ENTRADA </h1>
+
+        <div class="container" style="text-align: center;">
+
+            <img src="imagenes/Avatar-Profile-Vector.png" class="imagenentradaysalida"><br>
+
+            <div class="row container" id="usuario1">
+                <div class="col s10 input-field">
+                    <i class="material-icons prefix">face</i>
+                    <input type="text" id="usuario" style="color: aliceblue;" class="autocomplete">
+                    <label for="usuario">Usuario</label>
+                </div>
+            </div>>
+            <div class="row container">
+                <div class="col s10 input-field">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" style="color: aliceblue;">
+                </div>
+            </div>>
+
+            <a href="IngresarUsuario.html">
+                <button class=" red btn-large">
+                    <i class="material-icons right">touch_app</i>
+                    REGRESAR
+                </button>
+            </a>
+            <a id="boton1" href="Bienvenida.html">
+                <button class=" light-green darken-4 btn-large" id="Ingresar">
+                    <i class="material-icons right">touch_app</i>
+                    INICIAR JORNADA
+                </button>
+            </a>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+                data: {
+                     "JOHNNATAN ESTIVEN BONILLA ROJAS": null,
+                     "KELLY TATIANA ESQUIVEL": null,
+                }
+            };
+            var elems = document.querySelectorAll('.autocomplete');
+            var instances = M.Autocomplete.init(elems, options);
+            });
+        </script>
+
+        <script>
+            document.getElementById('boton1').onclick = function(){
+            alert('Bienvenido A Su Jornada laboral');
+            }
+        </script>
+
+        <script>
+            let mostrarReloj = () => {
+                let reloj = document.getElementById('reloj')
+                let fec_Datos = document.getElementById('fec_Datos')
+                let fecha = new Date();
+                let hora = fecha.getHours()
+                let minutos = fecha.getMinutes()
+                let segundos = fecha.getSeconds()
+                let mes = fecha.getMonth()
+                let dia = fecha.getDate()
+                let año = fecha.getFullYear()
+
+                let dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
+                let meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junnio', 'julio', 'agosto', 'septiembre', 'noviembre', 'diciembre']
+
+                mes = meses[mes]
+                let hr = (hora > 12) ? hora - 12 : hora
+                let am = (hora < 12) ? 'AM' : 'PM'
+                if (hora < 10) { hora = '0' + hora }
+                if (minutos < 10) { minutos = '0' + minutos }
+                if (segundos < 10) { segundos = '0' + minutos }
+
+                reloj.textContent = `${hr}:${minutos}:${segundos}:${am}`
+                fec_Datos.textContent = `${dia} ${mes} del ${año}`
+            }
+
+            setInterval(mostrarReloj, 1000)
+
+        </script>
+
+        <script src="js/materialize.min.js"></script>
+    </body>
+
+</html>
